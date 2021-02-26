@@ -212,11 +212,11 @@ def save_data(researchers, file_name): # Parameters are the list of researchers 
 
 
 if __name__ == '__main__':
-	data = Data('atualizar.csv') # Reads the data from the file
+	data = Data('file_name.csv') # Reads the data from the file
 	scopus_retriever = ScopusRetriever(data, '2f8a856ea2c32c265b4c5a9895e6900d') # Responsible for retrieving information from scopus using the data
 	data.add_data(scopus_retriever.retrieve_data()) # Add the new info retrieved from scopus to the previous data
 	data.save_quartis()
-	save_data(data.researchers, "atualizado.csv") # Saves the new data into a file
+	save_data(data.researchers, "file_name.csv") # Saves the new data into a file
 
 	
 
